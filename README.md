@@ -25,3 +25,5 @@
       1. R: CharacterListView
    4. templates/하프라이프/
       1. character_list.html
+   5. urls
+      1. 하프라이프:character_list
