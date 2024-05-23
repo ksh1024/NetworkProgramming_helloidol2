@@ -55,7 +55,7 @@ ROOT_URLCONF = 'helloidol2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], #내 장고 프젝 루트 /templates 디렉토리도 templates취급하자
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
