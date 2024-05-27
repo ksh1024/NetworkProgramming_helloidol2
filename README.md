@@ -26,14 +26,17 @@
       1. R: CharacterListView
       2. R: CharacterDetailView
       3. C: CharacterCreateView
+      4. U: CharacterUpdateView
    4. templates/하프라이프/
       1. character_list.html
       2. character_detail.html
       3. character_create.html
+      4. character_update.html
    5. urls
       1. 하프라이프:character_list
       2. 하프라이프:character_detail
       3. 하프라이프:character_create
+      4. 하프라이프:character_update
 4. templates/
    1. base.html
       1. setting.py > TEMPLATES
