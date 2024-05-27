@@ -8,6 +8,7 @@
           <th>name</th>
           <th>feature</th>
           <th>edit</th>
+          <th>remove</th>
       </tr>
       {% for character in character_list %}
       <tr>
@@ -15,10 +16,11 @@
           <td><a href="{% url '하프라이프:character_detail' pk=character.id %}">{{ character.name }}</a></td>
           <td>{{ character.feature }}</td>
           <td><a href="{% url '하프라이프:character_update' pk=character.id %}" class="btn btn-warning">🔨</a></td>
+          <td><a href="{% url '하프라이프:character_delete' pk=character.id %}" class="btn btn-danger">🧨</a></td>
       </tr>
       {% endfor %}
       <tr>
-          <td colspan="4"><a href="{% url '하프라이프:character_create' %}" class="btn btn-success">+ Character</a></td>
+          <td colspan="5"><a href="{% url '하프라이프:character_create' %}" class="btn btn-success">+ Character</a></td>
       </tr>
   </table>
 {%  endblock %}
