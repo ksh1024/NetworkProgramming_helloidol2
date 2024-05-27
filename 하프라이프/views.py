@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView
 
 from 하프라이프.models import Character
 
@@ -12,3 +13,9 @@ class CharacterDetailView(DetailView):
     model = Character
     # character = Character.objects.get(pk=pk)
     # return render(request, '하프라이프/character_detail.html' context={'character': character})
+
+class CharacterCreateView(CreateView):
+    model = Character
+    fields = ['name','feature']      #'__all__'
+    template_name_suffix = '_create' #character_form.html -> character_create.html
+    success_url = reverse_lazy('하프라이프:character_list') #만들기 성공할 때 이동할 URL

@@ -14,6 +14,9 @@
           <td><a href="{% url '하프라이프:character_detail' pk=character.id %}">{{ character.name }}</a></td>
           <td>{{ character.feature }}</td>
       </tr>
-      {%  endfor %}
+      {% endfor %}
+      <tr>
+          <td colspan="3"><a href="{% url '하프라이프:character_create' %}" class="btn btn-success">+ Character</a></td>
+      </tr>
   </table>
 {%  endblock %}
