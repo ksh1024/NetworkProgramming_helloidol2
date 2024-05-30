@@ -16,13 +16,13 @@ class CharacterDetailView(DetailView):
 
 class CharacterCreateView(CreateView):
     model = Character
-    fields = ['name','feature']      #'__all__'
+    fields = ['name','feature', 'photo']      #'__all__'
     template_name_suffix = '_create' #character_form.html -> character_create.html
     success_url = reverse_lazy('하프라이프:character_list') #만들기 성공할 때 이동할 URL
     
 class CharacterUpdateView(UpdateView):
     model = Character
-    fields = '__all__' #['name', 'feature']
+    fields = '__all__' #['name', 'feature', 'photo']
     template_name_suffix = '_update' # character_form.html에서 character_update.html로 고쳐줌
     success_url = reverse_lazy('하프라이프:character_list') #수정 성공시 이동할 URL
 
